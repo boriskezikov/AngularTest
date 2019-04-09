@@ -1,4 +1,11 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+
+
+const todos = [
+  'Изучить JavaScript',
+  'Изучить Angular 2',
+  'Написать приложение'
+];
 
 @Component({
   selector: 'app-root',
@@ -8,4 +15,5 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'GeneratorFront';
+  todos = todos;
 }
