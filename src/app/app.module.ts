@@ -6,6 +6,10 @@ import {TodoFormComponent} from './todo-form/todo-form.component';
 import {TodoListComponent} from './todo-list/todo-list.component';
 import {AppItemComponent} from './app-item/app-item.component';
 import {TodoService} from './todo-service/todo.service';
+// import {BuiRootModule} from 'business-ui-kit';
+// import {AppRoutingModule} from './app-routing.module';
+
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,7 @@ import {TodoService} from './todo-service/todo.service';
   ],
   providers: [TodoService],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, HttpClientModule, // BuiRootModule.forRoot(),
   ],
   bootstrap: [AppComponent]
 })

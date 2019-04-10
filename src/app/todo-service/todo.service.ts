@@ -1,8 +1,13 @@
 import {todos} from '../shared/data';
 import {Itodo} from '../shared/todo';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
 
+@Injectable()
 export class TodoService {
   todos: Itodo[] = todos;
+  constructor(private http: HttpClient) {
+  }
 
   getTodos(): Itodo[] {
     return this.todos;
