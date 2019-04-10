@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Itodo} from '../shared/todo';
 
 @Component({
@@ -7,9 +7,17 @@ import {Itodo} from '../shared/todo';
   templateUrl: './app-item.component.html',
   styleUrls: ['./app-item.component.css']
 })
-export class AppItemComponent{
-  todo: Itodo  = new Itodo('New header');
 
+export class AppItemComponent {
+  @Input() todo: Itodo;
+  @Output() delete = new EventEmitter();
+  @Output() toggle = new EventEmitter();
 
+  onToggle() {
+    this.toggle.emit(this.todo);
+  }
 
+  onDelete() {
+    this.delete.emit(this.todo);
+  }
 }
