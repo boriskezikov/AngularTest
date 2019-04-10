@@ -1,19 +1,15 @@
 import {Component} from '@angular/core';
-
-
-const todos = [
-  'Изучить JavaScript',
-  'Изучить Angular 2',
-  'Написать приложение'
-];
-
 @Component({
+  moduleId: module.id,
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.css']
 })
 
 export class AppComponent {
   title = 'GeneratorFront';
-  todos = todos;
 }
+
+
+
+
